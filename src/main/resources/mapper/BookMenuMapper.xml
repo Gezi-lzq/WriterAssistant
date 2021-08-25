@@ -5,12 +5,12 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.example.entity.BookMenu">
         <id column="id" property="id" />
-        <result column="passage_name" property="passage_name" />
-        <result column="article_length" property="article_length" />
+        <result column="passage_name" property="passageName" />
+        <result column="article_length" property="articleLength" />
         <result column="state" property="state" />
-        <result column="create_time" property="create_time" />
-        <result column="modification_time" property="modification_time" />
-        <result column="passage_content" property="passage_content" />
+        <result column="create_time" property="createTime" />
+        <result column="modification_time" property="modificationTime" />
+        <result column="passage_content" property="passageContent" />
     </resultMap>
 
     <!-- 通用查询结果列 -->

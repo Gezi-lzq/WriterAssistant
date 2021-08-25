@@ -30,9 +30,9 @@ public class Book implements Serializable {
 
     private String avatar;
 
-    private String book_name;
+    private String bookName;
 
-    private String book_desc;
+    private String bookDesc;
 
 
 }
