@@ -1,4 +1,4 @@
-package com.example.dto;
+package com.example.vo;
 
 
 import lombok.AllArgsConstructor;
@@ -8,8 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserLoginDTO {
+public class UserLoginVO {
     private String username;   //用户名
     private String password;    //密码
-    private String code;     //验证码
 }

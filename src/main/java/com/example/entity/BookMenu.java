@@ -3,8 +3,10 @@ package com.example.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.sql.Blob;
@@ -21,6 +23,8 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName("book_menu")
+@AllArgsConstructor
+@NoArgsConstructor
 public class BookMenu implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -28,17 +32,17 @@ public class BookMenu implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private String passage_name;
+    private String passageName;
 
-    private String article_length;
+    private Integer articleLength;
 
     private Integer state;
 
-    private LocalDateTime create_time;
+    private LocalDateTime createTime;
 
-    private LocalDateTime modification_time;
+    private LocalDateTime modificationTime;
 
-    private byte[] passage_content;
+    private String passageContent;
 
 
 }

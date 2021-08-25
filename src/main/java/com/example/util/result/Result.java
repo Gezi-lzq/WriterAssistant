@@ -8,8 +8,8 @@ import java.util.Map;
 @Data
 public class Result {
     private Boolean success;
-    private Integer code;
-    private String message;
+    private Integer status;
+    private String msg;
     private Map<String,Object> data=new HashMap<>();
 
     private Result(){
@@ -18,22 +18,29 @@ public class Result {
     public static Result ok(){
         Result result=new Result();
         result.setSuccess(true);
-        result.setCode(ResultCode.OK.getCode());
-        result.setMessage(ResultCode.OK.getMessage());
+        result.setStatus(ResultCode.OK.getCode());
+        result.setMsg(ResultCode.OK.getMessage());
+        return result;
+    }
+    public static Result ok(ResultCode resultCode){
+        Result result=new Result();
+        result.setSuccess(true);
+        result.setStatus(resultCode.getCode());
+        result.setMsg(resultCode.getMessage());
         return result;
     }
     public static Result error(){
         Result result=new Result();
         result.setSuccess(false);
-        result.setCode(ResultCode.ERROR.getCode());
-        result.setMessage(ResultCode.ERROR.getMessage());
+        result.setStatus(ResultCode.ERROR.getCode());
+        result.setMsg(ResultCode.ERROR.getMessage());
         return result;
     }
     public static Result error(ResultCode resultCode){
         Result result = new Result();
         result.setSuccess(false);
-        result.setCode(resultCode.getCode());
-        result.setMessage(resultCode.getMessage());
+        result.setStatus(resultCode.getCode());
+        result.setMsg(resultCode.getMessage());
         return result;
     }
     public Result success(Boolean success){
@@ -41,7 +48,7 @@ public class Result {
         return this;
     }
     public Result message(String message){
-        this.message=message;
+        this.msg=message;
         return this;
     }
     public Result data(String key,Object value){

@@ -7,8 +7,8 @@
         <id column="id" property="id" />
         <result column="username" property="username" />
         <result column="avatar" property="avatar" />
-        <result column="book_name" property="book_name" />
-        <result column="book_desc" property="book_desc" />
+        <result column="book_name" property="bookName" />
+        <result column="book_desc" property="bookDesc" />
     </resultMap>
 
     <!-- 通用查询结果列 -->

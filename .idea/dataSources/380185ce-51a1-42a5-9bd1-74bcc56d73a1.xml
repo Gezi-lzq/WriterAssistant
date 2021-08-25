@@ -945,7 +945,6 @@ SELECT|sys.sys_config
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="294" parent="285" name="passage_name">
       <Position>2</Position>
@@ -953,7 +952,7 @@ SELECT|sys.sys_config
     </column>
     <column id="295" parent="285" name="article_length">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>int|0s</DataType>
     </column>
     <column id="296" parent="285" name="state">
       <Position>4</Position>
@@ -969,28 +968,23 @@ SELECT|sys.sys_config
     </column>
     <column id="299" parent="285" name="passage_content">
       <Position>7</Position>
-      <DataType>blob|0s</DataType>
+      <DataType>longtext|0s</DataType>
     </column>
-    <key id="300" parent="285" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="301" parent="286" name="id">
+    <column id="300" parent="286" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="302" parent="286" name="username">
+    <column id="301" parent="286" name="username">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <column id="303" parent="286" name="password">
+    <column id="302" parent="286" name="password">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <key id="304" parent="286" name="PRIMARY">
+    <key id="303" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

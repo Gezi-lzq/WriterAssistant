@@ -1,6 +1,8 @@
 package com.example;
 
+import com.example.entity.Book;
 import com.example.entity.User;
+import com.example.mapper.BookMapper;
 import com.example.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +14,13 @@ import java.util.List;
 class BookApplicationTests {
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private BookMapper bookMapper;
 
     @Test
     void contextLoads() {
-        List<User> users = userMapper.selectList(null);
-        users.forEach(System.out::println);
+        List<Book> books = bookMapper.selectList(null);
+        books.forEach(System.out::println);
     }
 
 }
